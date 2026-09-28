@@ -1,23 +1,192 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>My Portfolio</title>
 </head>
+
 <body>
 
+```
+<header>
+    <a href="#" aria-label="Go to home">
+        <img src="Image/logo.png" alt="My Portfolio logo" width="120" height="120">
+    </a>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+
+    <form>
+        <input type="text" placeholder="Search..">
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<main>
+
     <h1>Welcome to My Portfolio</h1>
+
     <p>This is my simple portfolio website.</p>
 
-    <h2>About Me</h2>
-    <p>I am an IT student who loves learning technology and coding.</p>
+    <section id="about">
 
-    <h2>My Skills</h2>
-    <p>HTML, CSS, JavaScript, Python</p>
+        <h2>About Me</h2>
 
-    <h2>My Projects</h2>
-    <p>Portfolio Website, Expense Calculator</p>
+        <img src="Image/profilpic.png"
+             alt="Profile Picture"
+             width="200"
+             height="200">
 
-    <h2>Contact Me</h2>
-    <p>Email: reyush@example.com</p>
+        <p>I am an IT student who loves learning technology and coding.</p>
 
+    </section>
+
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <p>HTML, CSS, JavaScript, Python</p>
+
+    </section>
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <p>
+            <a href="portfolio.html">Portfolio Website</a>
+            &nbsp;&nbsp;&nbsp;
+            <a href="expense-calculator.html">Expense Calculator</a>
+        </p>
+
+    </section>
+
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S.N</th>
+                    <th>Level</th>
+                    <th>Institution</th>
+                    <th>GPA</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>School Level</td>
+                    <td>Fluorescent Secondary School</td>
+                    <td>3.8</td>
+                    <td>A+</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Higher Secondary Level</td>
+                    <td>St. Xavier's College</td>
+                    <td>3.6</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Bachelor Level</td>
+                    <td>St. Xavier's College</td>
+                    <td>3.7</td>
+                    <td>A</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <section>
+
+        <h2>Find Me On</h2>
+
+        <a href="https://www.facebook.com/reyush.tamang.5"
+           target="_blank"
+           rel="noopener noreferrer">
+            <img src="Image/facebook.jpg"
+                 alt="Facebook"
+                 width="30"
+                 height="30">
+        </a>
+
+        &nbsp;&nbsp;&nbsp;
+
+        <a href="https://github.com/Reyush19"
+           target="_blank"
+           rel="noopener noreferrer">
+            <img src="Image/github.png"
+                 alt="GitHub"
+                 width="30"
+                 height="30">
+        </a>
+
+        &nbsp;&nbsp;&nbsp;
+
+        <a href="https://www.linkedin.com/in/reyush-tamang-58600533b/"
+           target="_blank"
+           rel="noopener noreferrer">
+            <img src="Image/linkedin.png"
+                 alt="LinkedIn"
+                 width="30"
+                 height="30">
+        </a>
+
+        &nbsp;&nbsp;&nbsp;
+
+        <a href="https://www.instagram.com/_reyush._/"
+           target="_blank"
+           rel="noopener noreferrer">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+                 alt="Instagram"
+                 width="30"
+                 height="30">
+        </a>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="tel" id="phone" name="phone"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message"
+                      name="message"
+                      rows="4"
+                      cols="50"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </section>
+
+</main>
+<footer> <p> &copy; 2026 My Portfolio. All rights reserved. </p> </footer>
 </body>
 </html>
