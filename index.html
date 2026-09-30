@@ -4,49 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
 
-```
-<header>
-    <a href="#" aria-label="Go to home">
+<header class="site-header">
+    <a class="logo-link" href="#" aria-label="Go to home">
         <img src="Image/logo.png" alt="My Portfolio logo" width="120" height="120">
     </a>
 
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#education">Education</a></li>
-        </ul>
-    </nav>
+    <div class="header-controls">
+        <nav id="navigation-division" aria-label="Main navigation">
+            <ul>
+                <li class="nav-item"><a class="nav-button" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-button" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-button" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-button" href="#projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-button" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-button" href="#education">Education</a></li>
+            </ul>
+        </nav>
 
-    <form>
-        <input type="text" placeholder="Search..">
-        <button type="submit">Search</button>
-    </form>
+        <div id="search-division">
+            <form>
+                <input type="text" placeholder="Search..">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
 </header>
 
 <main>
 
-    <h1>Welcome to My Portfolio</h1>
-
-    <p>This is my simple portfolio website.</p>
-
     <section id="about">
 
-        <h2>About Me</h2>
+        <div class="about-content">
+            <h2>About Me</h2>
 
-        <img src="Image/profilpic.png"
-             alt="Profile Picture"
-             width="200"
-             height="200">
+            <p>I am an IT student who is interested in technology, programming, and web development. I enjoy learning new technologies and improving my coding skills by working on different projects. I like exploring how websites and applications work and finding simple ways to solve problems using technology. Through my studies and personal projects, I am gaining practical experience in areas such as HTML, CSS, JavaScript, and Python. My goal is to continue learning, build useful projects, and develop my skills for a future career in the IT field.</p>
 
-        <p>I am an IT student who loves learning technology and coding.</p>
+            <img class="profile-photo"
+                 src="Image/profilpic.png"
+                 alt="Profile Picture"
+                 width="200"
+                 height="200">
+        </div>
 
     </section>
 
@@ -62,19 +65,30 @@
 
         <h2>My Projects</h2>
 
-        <p>
-            <a href="portfolio.html">Portfolio Website</a>
-            &nbsp;&nbsp;&nbsp;
-            <a href="expense-calculator.html">Expense Calculator</a>
-        </p>
+        <div class="project-item">
+            <h3>Portfolio Website</h3>
+            <p>A personal website built with HTML and CSS.</p>
+            <a href="https://github.com/Reyush19" target="_blank" rel="noopener noreferrer">Click here for the link</a>
+        </div>
+
+        <div class="project-item">
+            <h3>Expense Calculator</h3>
+            <p>A simple calculator for tracking daily expenses.</p>
+            <a href="https://github.com/Reyush19" target="_blank" rel="noopener noreferrer">Click here for the link</a>
+        </div>
+
+        <div class="project-item">
+            <h3>To-Do List App</h3>
+            <p>A simple app for adding and managing daily tasks.</p>
+            <a href="https://github.com/Reyush19" target="_blank" rel="noopener noreferrer">Click here for the link</a>
+        </div>
 
     </section>
 
     <section id="education">
-
         <h2>Education</h2>
 
-        <table>
+        <table border="1">
             <thead>
                 <tr>
                     <th>S.N</th>
@@ -114,7 +128,7 @@
 
     </section>
 
-    <section>
+    <section id="social">
 
         <h2>Find Me On</h2>
 
@@ -187,6 +201,8 @@
     </section>
 
 </main>
+
 <footer> <p> &copy; 2026 My Portfolio. All rights reserved. </p> </footer>
+
 </body>
 </html>
