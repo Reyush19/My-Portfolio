@@ -205,6 +205,21 @@ section + section{
     display: flex;
 }
 
+#search-division input{
+    min-width: 0;
+}
+
+#education table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#contact input,
+#contact textarea{
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
 @media (max-width: 1050px){
     .site-header{
         grid-template-columns: 132px minmax(0, 1fr);
@@ -213,6 +228,10 @@ section + section{
 }
 
 @media (max-width: 700px){
+    body{
+        padding: 1.5rem 0.75rem 2rem;
+    }
+
     .site-header{
         align-items: stretch;
         display: flex;
@@ -228,8 +247,38 @@ section + section{
         flex-direction: column;
     }
 
+    #navigation-division{
+        padding: 0.75rem;
+    }
+
     nav ul{
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-photo{
+        align-self: center;
+        order: -1;
+    }
+
+    #education{
+        overflow-x: auto;
+    }
+
+    #education table{
+        min-width: 520px;
+    }
+
+    #search-division form{
+        width: 100%;
+    }
+
+    #search-division input{
+        flex: 1;
     }
 
     #search-division{
