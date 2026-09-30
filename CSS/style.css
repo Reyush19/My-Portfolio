@@ -205,22 +205,6 @@ section + section{
     display: flex;
 }
 
-#social{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-}
-
-#social h2{
-    flex-basis: 100%;
-    margin: 0;
-}
-
-#social a{
-    display: block;
-    line-height: 0;
-}
-
 @media (max-width: 1050px){
     .site-header{
         grid-template-columns: 132px minmax(0, 1fr);
