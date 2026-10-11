@@ -29,8 +29,6 @@ h2 {
     margin-top: 0;
 }
 
-
-
 .site-header {
     align-items: center;
     display: grid;
@@ -39,7 +37,6 @@ h2 {
     max-width: 1100px;
     margin: 0 auto 35px;
 }
-
 
 .logo-link {
     align-items: center;
@@ -64,14 +61,11 @@ h2 {
     box-shadow: 0 10px 20px rgba(22, 50, 79, 0.18);
 }
 
-
 .header-controls {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
-
 
 #navigation-division {
     background-color: #16324f;
@@ -83,7 +77,7 @@ h2 {
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
     gap: 6px;
     list-style: none;
     margin: 0;
@@ -111,7 +105,7 @@ nav ul {
 
 .nav-button:focus {
     outline: 3px solid #e9c46a;
-}   
+}
 
 #search-division form {
     display: flex;
@@ -144,9 +138,6 @@ nav ul {
     background-color: #237c73;
 }
 
-
-
-
 main {
     max-width: 1100px;
     margin: 0 auto;
@@ -156,8 +147,8 @@ section + section {
     margin-top: 30px;
 }
 
-
 #about,
+#gallery,
 #skills,
 #projects,
 #education,
@@ -172,6 +163,7 @@ section + section {
 }
 
 #about:hover,
+#gallery:hover,
 #skills:hover,
 #projects:hover,
 #education:hover,
@@ -181,8 +173,8 @@ section + section {
     box-shadow: 0 10px 25px rgba(22, 50, 79, 0.15);
 }
 
-
 #about h2,
+#gallery h2,
 #skills h2,
 #projects h2,
 #education h2,
@@ -221,6 +213,165 @@ section + section {
     transform: scale(1.04);
     border-color: #e9c46a;
 }
+
+
+/* =====================================================
+   IMAGE SLIDER CSS
+   ===================================================== */
+
+
+/* 1. IMAGE SLIDER CONTAINER
+   Sets the slider's width and adds space above it. */
+
+.portfolio-photo-slider {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.portfolio-photo-slider .slider-viewport {
+    aspect-ratio: 16 / 9;
+    border: 4px solid #2a9d8f;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 8px 18px rgba(22, 50, 79, 0.20);
+    transition: 0.3s;
+}
+
+.portfolio-photo-slider .slider-viewport:hover {
+    border-color: #e9c46a;
+}
+
+
+/* 3. SLIDES TRACK AND TRANSITION
+   Arranges all slides in a horizontal row.
+   The transform transition creates smooth slide movement. */
+
+.portfolio-photo-slider .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.45s ease-in-out;
+    will-change: transform;
+}
+
+.portfolio-photo-slider .slide {
+    cursor: pointer;
+    display: block;
+    flex: 0 0 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* 5. PREVIOUS AND NEXT NAVIGATION ARROWS
+   Styles both navigation buttons and positions them
+   vertically in the middle of the slider. */
+
+.portfolio-photo-slider .previous,
+.portfolio-photo-slider .next {
+    background: #ffffff;
+    border: 0;
+    border-radius: 6px;
+    color: #16324f;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 10px 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+
+.portfolio-photo-slider .previous {
+    left: 12px;
+}
+
+
+.portfolio-photo-slider .next {
+    right: 12px;
+}
+
+
+/* 6. NAVIGATION ARROW HOVER AND FOCUS EFFECTS
+   Changes the arrow colors when the pointer moves over
+   them and displays a focus outline for keyboard users. */
+
+.portfolio-photo-slider .previous:hover,
+.portfolio-photo-slider .next:hover {
+    background-color: #2a9d8f;
+    color: #ffffff;
+}
+
+.portfolio-photo-slider .previous:focus,
+.portfolio-photo-slider .next:focus,
+.portfolio-photo-slider .dot:focus {
+    outline: 3px solid #e9c46a;
+}
+
+
+/* 7. SLIDER PAGINATION DOTS
+   Places the dots in a centered row below the slider.
+   Each dot represents a slide. */
+
+.portfolio-photo-slider .slider-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.portfolio-photo-slider .dot {
+    background: rgba(42, 157, 143, 0.35);
+    border: 2px solid #2a9d8f;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 12px;
+    padding: 0;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+    width: 12px;
+}
+
+
+/* 8. ACTIVE PAGINATION DOT
+   Highlights the dot for the currently displayed slide.
+   It changes the color and slightly increases the dot size. */
+
+.portfolio-photo-slider .dot.is-active {
+    background: #e9c46a;
+    transform: scale(1.2);
+}
+
+
+/* 9. REMOVING UNWANTED DOT SHADOWS
+   Removes box shadows and text shadows from the dots
+   in normal, hover, focus, active, and selected states. */
+
+.portfolio-photo-slider .dot,
+.portfolio-photo-slider .dot:hover,
+.portfolio-photo-slider .dot:focus,
+.portfolio-photo-slider .dot:active,
+.portfolio-photo-slider .dot.is-active {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+.portfolio-photo-slider .dot:focus {
+    outline: none;
+}
+
+
+/* =====================================================
+   OTHER PORTFOLIO SECTIONS
+   ===================================================== */
 
 #skills p {
     background-color: #e8f5f3;
@@ -268,7 +419,6 @@ section + section {
     background-color: #237c73;
     transform: translateY(-2px);
 }
-
 
 .education-table {
     border-collapse: collapse;
@@ -378,7 +528,6 @@ section + section {
     transform: translateY(-2px);
 }
 
-
 footer {
     background-color: #16324f;
     border-radius: 12px;
@@ -395,7 +544,6 @@ footer p {
     margin: 0;
 }
 
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -409,6 +557,9 @@ footer p {
 }
 
 
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
 
 @media (max-width: 1050px) {
 
@@ -482,7 +633,17 @@ footer p {
         height: 160px;
     }
 
+
+    /* 10. RESPONSIVE IMAGE SLIDER
+       Changes the slider to a 4:3 aspect ratio on mobile
+       so the images fit better on smaller screens. */
+
+    .portfolio-photo-slider .slider-viewport {
+        aspect-ratio: 4 / 3;
+    }
+
     #about h2,
+    #gallery h2,
     #skills h2,
     #projects h2,
     #education h2,
@@ -508,6 +669,8 @@ footer p {
         width: 100%;
     }
 }
+
+
 @media (max-width: 450px) {
 
     nav ul {
@@ -535,5 +698,13 @@ footer p {
     .profile-photo {
         width: 140px;
         height: 140px;
+    }
+
+    /* Reduces navigation arrow size on very small screens. */
+
+    .portfolio-photo-slider .previous,
+    .portfolio-photo-slider .next {
+        font-size: 16px;
+        padding: 8px 11px;
     }
 }
